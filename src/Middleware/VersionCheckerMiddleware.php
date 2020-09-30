@@ -4,7 +4,7 @@
 namespace Jhyangxyz\MessengerVersionControl\Middleware;
 
 
-use App\Exception\VersionNotSupportedException;
+use Jhyangxyz\MessengerVersionControl\Exception\VersionNotSupportedException;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;

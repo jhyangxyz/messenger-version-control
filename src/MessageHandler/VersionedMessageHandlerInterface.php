@@ -5,7 +5,7 @@ namespace Jhyangxyz\MessengerVersionControl\MessageHandler;
 
 
 
-use App\Exception\VersionNotSupportedException;
+use Jhyangxyz\MessengerVersionControl\Exception\VersionNotSupportedException;
 use Jhyangxyz\MessengerVersionControl\Message\VersionedMessageInterface;
 
 interface VersionedMessageHandlerInterface

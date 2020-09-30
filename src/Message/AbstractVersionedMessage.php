@@ -11,9 +11,9 @@ abstract class AbstractVersionedMessage implements VersionedMessageInterface
      */
     protected $version;
 
-    protected function setVersion(): void
+    protected function setVersion(?int $forceVersion): void
     {
-        $this->version = $this->getBuildVersion();
+        $this->version = null === $forceVersion ? $this->getBuildVersion() : $forceVersion;
     }
 
     public function getVersion(): int
