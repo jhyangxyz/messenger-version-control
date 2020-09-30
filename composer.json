@@ -18,5 +18,8 @@
             "name": "JH Yang",
             "email": "yang@jhyang.xyz"
         }
-    ]
+    ],
+    "require-dev": {
+        "symfony/phpunit-bridge": "^5.1"
+    }
 }
