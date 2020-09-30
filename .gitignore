@@ -4,3 +4,5 @@ composer.lock
 phpunit.xml
 
 var/cache/test/
+
+.phpunit.result.cache

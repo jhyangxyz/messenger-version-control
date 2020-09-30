@@ -26,7 +26,7 @@ Configure this Middleware to your MessageBus
 
 #### Register the Bundle if not done automaticaly
 
-```yaml
+```php
 <?php
 
 return [
@@ -45,4 +45,50 @@ framework:
             message.bus.commands:
                 middleware:
                     - jhyangxyz.messenger_version_control.middleware.version_checker_middleware
+```
+
+#### Configure a Message
+
+```php
+<?php
+
+namespace App\Message;
+
+use Jhyangxyz\MessengerVersionControl\Message\AbstractVersionedMessage;
+
+final class FooMessage extends AbstractVersionedMessage
+{
+    public function __construct()
+    {
+        $this->setVersion();
+    }
+
+    public function getBuildVersion(): int
+    {
+        return 1;
+    }
+}
+```
+
+#### Configure a MessageHandler
+
+```php
+<?php
+
+namespace App\MessageHandler;
+
+
+use Jhyangxyz\MessengerVersionControl\MessageHandler\AbstractVersionedMessageHandler;
+
+
+final class FooMessageHandler extends AbstractVersionedMessageHandler
+{
+    public function __invoke(FooMessage $message)
+    {
+        $this->checkVersion($message);  
+        
+        //Handle message
+        ...
+    }
+}
 ```
