@@ -14,10 +14,10 @@ matrix:
           # Minimum supported dependencies with the latest and oldest PHP version
         - php: 7.4
           env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
-        - php: 7.2
+        - php: 7.3
           env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
           # Test the latest stable release
-        - php: 7.1
+        - php: 7.3
         - php: 7.4
           env: COVERAGE=true PHPUNIT_FLAGS="-v --coverage-text"
           # Test LTS versions. This makes sure we do not use Symfony packages with version greater
@@ -28,3 +28,10 @@ matrix:
           env: DEPENDENCIES="symfony/lts:^3"
           # Latest commit to master
         - php: 7.4
+
+install:
+  - composer update ${COMPOSER_FLAGS} --no-progress --no-suggest --ansi
+
+script:
+  - php-cs-fixer fix --dry-run --diff --no-ansi
+  - vendor/bin/phpunit
