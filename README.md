@@ -1,7 +1,5 @@
 # Messenger Version Control
 
-![CodeStyle](https://github.com/fjogeleit/prometheus-messenger-middleware/workflows/CodeStyle/badge.svg)
-
 A Simple Bunlde to version your Symfony Messenger messages.
 
 * Versionning of a message
