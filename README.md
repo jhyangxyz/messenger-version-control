@@ -1,5 +1,8 @@
 # Messenger Version Control
 
+![CodeStyle](https://travis-ci.org/jhyangxyz/messenger-version-control.svg?branch=master)
+
+
 A Simple Bunlde to version your Symfony Messenger messages.
 
 * Versionning of a message
