@@ -33,5 +33,4 @@ install:
   - composer update ${COMPOSER_FLAGS} --no-progress --no-suggest --ansi
 
 script:
-  - php-cs-fixer fix --dry-run --diff --no-ansi
-  - vendor/bin/phpunit
+  - vendor/bin/simple-phpunit
