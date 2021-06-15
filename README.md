@@ -3,7 +3,7 @@
 ![CodeStyle](https://travis-ci.org/jhyangxyz/messenger-version-control.svg?branch=master)
 
 
-A Simple Bunlde to version your Symfony Messenger messages.
+A Simple Bundle to version your Symfony Messenger messages.
 
 * Versionning of a message
 * Requeuing consumers that has different version with the concerned message
